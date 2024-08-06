@@ -1,0 +1,8 @@
+/* Child Selectors in CSS */
+#blog > h1 {
+    color: blue;
+}
+
+a:hover {
+    color: brown;
+}
