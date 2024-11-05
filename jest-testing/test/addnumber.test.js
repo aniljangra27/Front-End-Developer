@@ -1,7 +1,7 @@
-const {default: TestRunner} = require("jest-runner");
+// const {default: TestRunner} = require("jest-runner"); // optional
 const addNumber = require(`../addNumber`); // it represents where the file exits
 
-test('add two numner',() => {
+it('add two numner',() => {
     expect(addNumber(2,2)).toBe(4);
 })
 
