@@ -1,0 +1,10 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 150vh;
+}
+head {
+    background-color: aqua;
+    padding: 2em;
+    text-align: center;
+}
