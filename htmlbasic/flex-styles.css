@@ -1,0 +1,33 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+}
+ /* #logo {
+    width: 50%;
+    height: auto;
+    border-radius: 50px;
+    object-fit: fill;
+    margin-left: auto;
+    margin-right: auto;
+}  */
+.box {
+    background-color: aquamarine;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 2px;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    gap: 10px;
+}
+.box3 {
+    background-color: blueviolet;
+    align-self: center;
+    /* flex: 1 1 auto; */
+}
