@@ -62,6 +62,12 @@ li > a {
     margin-top: 20px;
 }
 
+section img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px;
+}
+
 div > section {
     flex: 1;
    background-color: bisque;
@@ -109,4 +115,81 @@ section div:first-of-type p {
     font-size: 14px;
     color: #333;
     margin: 0;
+}
+
+/* Responsive styles */
+
+/* Tablet styles */
+@media screen and (max-width: 1024px) {
+    nav li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    #container {
+        flex-direction: column;
+    }
+
+    div > section {
+        flex: 1 1 100%; /* Full width on smaller screens */
+    }
+
+    .hero-text p {
+        max-width: 80%; /* Reduce text wrapping for smaller screens */
+    }
+
+    section img {
+        object-fit: cover; /* Ensures the image covers the container */
+        height: 100%; /* Fill the height of the container */
+        width: 100%; /* Ensure it fills the width */
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-right {
+        align-items: center;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .footer-line {
+        width: 100%; /* Full width */
+    }
+    
+}
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+    header > img {
+        width: 150px;
+    }
+
+    nav li {
+        font-size: medium;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+    }
+
+    #container {
+        gap: 5px;
+    }
+    
+    section img {
+        object-fit: cover;
+        height: 100%; /* Make sure the image fills the section completely on smaller screens */
+        width: 100%;
+    }
+
+    .footer {
+        padding: 10px;
+    }
 }
