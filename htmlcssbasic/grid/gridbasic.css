@@ -3,8 +3,18 @@ body {
     grid-template-rows: auto 1fr auto;
     height: 150vh;
 }
-head {
+header {
     background-color: aqua;
+    padding: 2em;
+    text-align: center;
+}
+main {
+    background-color: aquamarine;
+    padding: 2em;
+    text-align: center;
+}
+footer {
+    background-color: azure;
     padding: 2em;
     text-align: center;
 }
