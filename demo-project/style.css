@@ -15,27 +15,47 @@ header > img {
     margin-left: 10px;
     margin-right: 10px;
 }
+/* Navigation  */
+/* Default Desktop Menu */
 nav {
     background-color: black;
     box-sizing: border-box;
     border-radius: 10px;
+    padding: 10px 20px;
+    position: relative;
 }
+
 nav ul {
     list-style: none;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    display: flex; /* Horizontal layout for desktop */
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
+
 nav li {
-    display: inline-block;
-    font-size: large;
-   
-    color: aliceblue;
+    margin: 0 15px;
 }
+
 li > a {
     color: aliceblue;
+    text-decoration: none;
     padding: 10px;
+    display: block;
+    font-size: large;
 }
+
+/* Hamburger Button (Hidden on Desktop) */
+.menu-toggle {
+    display: none;  /*Hide on larger screens */
+    background: none;
+    border: none;
+    color: aliceblue;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
 .hero {
     background: url('asset/img_snow.jpg') no-repeat center center/cover;
     color: rgb(21, 7, 7);
@@ -44,6 +64,7 @@ li > a {
     border-radius: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 20px;
 }
 
 .hero-text h2 {
@@ -121,9 +142,30 @@ section div:first-of-type p {
 
 /* Tablet styles */
 @media screen and (max-width: 1024px) {
+    nav ul {
+        display: none; /* Hide the menu by default */
+        flex-direction: column; /* Stack items vertically */
+        background-color: black;
+        border-radius: 10px;
+        padding: 10px;
+        position: absolute;
+        top: 100%; /* Below the navbar */
+        right: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when toggled */
+    }
+
     nav li {
-        display: block;
-        margin: 5px 0;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Show the hamburger button */
     }
 
     #container {
@@ -166,9 +208,21 @@ section div:first-of-type p {
     header > img {
         width: 150px;
     }
+    /* Navigation */
+    nav {
+        padding: 10px;
+    }
 
     nav li {
         font-size: medium;
+    }
+
+    nav ul {
+        display: none; /* Hide the menu by default */
+    }
+
+    nav ul.show {
+        display: flex; /* Show menu when toggled */
     }
 
     .hero-text h2 {
@@ -182,7 +236,7 @@ section div:first-of-type p {
     #container {
         gap: 5px;
     }
-    
+
     section img {
         object-fit: cover;
         height: 100%; /* Make sure the image fills the section completely on smaller screens */
