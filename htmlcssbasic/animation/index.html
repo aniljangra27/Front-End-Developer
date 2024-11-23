@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            padding: 30px;
+        }
+        .box {
+            height: 50px;
+            width: 50px;
+            background-color: blueviolet;
+            animation: boxanimation 10s infinite ease-in;
+        }
+        .box1 {
+            height: 80px;
+            width: auto;
+            background-color: brown;
+            animation: box1animation 20s infinite ease-in;
+        }
+        @keyframes box1animation {
+            from {width: 50px;}
+            to{width: 500px} 
+        }
+        @keyframes boxanimation {
+            
+            0%{width: 50px;}
+            50%{background-color: aquamarine; height: 20px;}
+            100%{width: 100px;}
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box"></div> 
+    <div class="box1"></div>
+</body>
+</html>

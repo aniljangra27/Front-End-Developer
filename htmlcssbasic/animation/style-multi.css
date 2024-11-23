@@ -1,0 +1,56 @@
+@keyframes bounceEdge {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    25% {
+        transform: translate3d(calc(100vw - 80px), 0, 0); /* Moves to the right */
+    }
+    50% {
+        transform: translate3d(calc(100vw - 80px), calc(100vh - 80px), 0); /* Moves to the bottom-right */
+    }
+    75% {
+        transform: translate3d(0, calc(100vh - 80px), 0); /* Moves to the bottom-left */
+    }
+    100% {
+        transform: translate3d(0, 0, 0); /* Returns to the top-left */
+    }
+
+}
+@keyframes bounceball {
+    0% {
+        transform: translate3d(0, 0, 0); /* Start at the top-left */
+    }
+    25% {
+        transform: translate3d(calc(100vw - 80px), calc(100vh - 200px), 0); /* Peak bounce to bottom-right */
+    }
+    50% {
+        transform: translate3d(0, calc(100vh - 80px), 0); /* Hit the bottom-left */
+    }
+    75% {
+        transform: translate3d(calc(100vw - 80px), 0, 0); /* Back to top-right */
+    }
+    100% {
+        transform: translate3d(0, 0, 0); /* End at the top-left */
+    }
+}
+
+#bounceBall {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: black;
+
+    position: absolute;
+    animation: bounceball 3s cubic-bezier(0.25, 0.1, 0.25, 1) infinite; /* Smooth bounce */
+}
+
+#ball {
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+    border-radius: 50px;
+    animation: bounceEdge 2s infinite ease-in; 
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 100ms;
+}
